@@ -12,7 +12,7 @@ const logEventGameOver = "GAME OVER";
 
 let battleLog = [];
 function getMaxLifeVal() {
-  const UserInput = prompt("Maxim life for you and the monster", "100");
+  const UserInput = prompt("Maximum life for you and the monster", "100");
   const inputVal = parseInt(UserInput);
   if (isNaN(inputVal) || inputVal <= 0) {
     alert("Invalid user input entered");
@@ -41,13 +41,7 @@ let hasBonusLife = true;
 
 adjustHealthBars(chosenMaxLife);
 
-function writeLog(
-  event,
-  value,
-  monsterHealth,
-  finalMonsterHealth,
-  finalPlayerHealth
-) {
+function writeLog(event, value, finalMonsterHealth, finalPlayerHealth) {
   let logEntry;
   if (event === logEventPAttack) {
     logEntry = {
